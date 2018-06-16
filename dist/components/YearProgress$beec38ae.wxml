@@ -1,0 +1,10 @@
+<template name="YearProgress$beec38ae">
+  <view class="_div data-v-558ae42e yearProgress">
+    <progress percent="{{percent}}" color="#2d9aa1" class="_progress data-v-558ae42e" />
+    <view class="_div data-v-558ae42e">
+      <view class="_b data-v-558ae42e imp">{{year}}</view>已经过去了
+      <view class="_b data-v-558ae42e imp">{{days}}</view>天,
+      <view class="_b data-v-558ae42e imp">{{percent}}%</view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,6 @@
+<template name="Rate$64982a02">
+  <view class="_div data-v-4b677ef8 rate">
+    <view class="_div data-v-4b677ef8 hide">⭐⭐⭐⭐⭐</view>
+    <view class="_div data-v-4b677ef8 show" style=" {{style}}">⭐⭐⭐⭐⭐</view>
+  </view>
+</template>

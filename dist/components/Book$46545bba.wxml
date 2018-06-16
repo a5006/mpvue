@@ -1,0 +1,7 @@
+<import src="BookList$54a120fa" />
+<template name="Book$46545bba">
+  <view class="_div data-v-7b479768 content">
+    <template wx:key="book.id" data="{{...$root[$kk+'0-'+index], $root}}" is="BookList$54a120fa" wx:for="{{books}}" wx:for-index="index" wx:for-item="book"></template>
+    <view class="_p data-v-7b479768 text-bottom" wx:if="{{!more}}">没有更多数据</view>
+  </view>
+</template>

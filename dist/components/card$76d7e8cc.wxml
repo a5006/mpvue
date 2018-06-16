@@ -1,0 +1,13 @@
+<template name="card$76d7e8cc">
+  <view class="_div data-v-b2479b5e book-card">
+    <view class="_div data-v-b2479b5e thumb">
+      <image src="{{book.image}}" class="_img data-v-b2479b5e image" alt></image>
+    </view>
+    <view class="_div data-v-b2479b5e detail">
+      <view class="_div data-v-b2479b5e row">
+        <view class="_div data-v-b2479b5e right"> {{book.rate}} </view>
+        <view class="_div data-v-b2479b5e left"> {{book.title}} </view>
+      </view>
+    </view>
+  </view>
+</template>

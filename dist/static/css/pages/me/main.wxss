@@ -1,0 +1,29 @@
+
+.container.data-v-e4a7c0a2 {
+  padding: 0 60rpx;
+}
+.container .userinfo.data-v-e4a7c0a2 {
+  margin-top: 100rpx;
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+.container .userinfo ._img.data-v-e4a7c0a2 {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin: 20rpx;
+}
+.yearProgress.data-v-558ae42e {
+  width: 100%;
+  font-size: 32rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.yearProgress ._progress.data-v-558ae42e {
+  margin-bottom: 20rpx;
+}
+.yearProgress .imp.data-v-558ae42e {
+  display: inline-block;
+  color: #2d9aa1;
+  font-weight: bold;
+}

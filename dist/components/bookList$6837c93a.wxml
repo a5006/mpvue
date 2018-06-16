@@ -1,0 +1,21 @@
+<template name="bookList$6837c93a">
+  <view class="_div data-v-65ee1a68 book-card">
+    <view class="_div data-v-65ee1a68 thumb">
+      <image src="{{book.image}}" class="_img data-v-65ee1a68 img" alt mode="aspectFit"></image>
+    </view>
+    <view class="_div data-v-65ee1a68 detail">
+      <view class="_div data-v-65ee1a68 row">
+        <view class="_div data-v-65ee1a68 right rate"> {{book.rate}} </view>
+        <view class="_div data-v-65ee1a68 left title"> {{book.title}} </view>
+      </view>
+      <view class="_div data-v-65ee1a68 row">
+        <view class="_div data-v-65ee1a68 right"> 浏览量 </view>
+        <view class="_div data-v-65ee1a68 left elliplis_twoline author"> {{book.author}} </view>
+      </view>
+      <view class="_div data-v-65ee1a68 row">
+        <view class="_div data-v-65ee1a68 right"> 添加人 </view>
+        <view class="_div data-v-65ee1a68 left elliplis publisher"> {{book.publisher}} </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,24 @@
+<import src="Rate$d7489288" />
+<template name="BookList$54a120fa">
+  <view class="_div data-v-6fb96e88 book-card">
+    <view class="_div data-v-6fb96e88 thumb">
+      <image src="{{book.image}}" class="_img data-v-6fb96e88 img" alt mode="aspectFit"></image>
+    </view>
+    <view class="_div data-v-6fb96e88 detail">
+      <view class="_div data-v-6fb96e88 row">
+        <view class="_div data-v-6fb96e88 right rate"> {{book.rate}}
+          <template data="{{...$root[$kk+'0'], $root}}" is="Rate$d7489288"></template>
+        </view>
+        <view class="_div data-v-6fb96e88 left title"> {{book.title}} </view>
+      </view>
+      <view class="_div data-v-6fb96e88 row">
+        <view class="_div data-v-6fb96e88 right"> 浏览量 </view>
+        <view class="_div data-v-6fb96e88 left elliplis_twoline author"> {{book.author?book.author:' '}} </view>
+      </view>
+      <view class="_div data-v-6fb96e88 row">
+        <view class="_div data-v-6fb96e88 right"> {{book.user_info.nickName}} </view>
+        <view class="_div data-v-6fb96e88 left elliplis publisher"> {{book.publisher}} </view>
+      </view>
+    </view>
+  </view>
+</template>

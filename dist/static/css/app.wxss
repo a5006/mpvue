@@ -1,0 +1,23 @@
+
+.btn {
+  color: #fff;
+  background: #47b0b7;
+  margin-bottom: 20rpx;
+  padding-left: 30rpx;
+  border-radius: 4rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 100%;
+}
+.btn:active {
+  background: #2d9aa1;
+}
+.text-bottom {
+  text-align: center;
+  font-size: 24rpx;
+  color: #828282;
+  background: #f4f4f4;
+  height: 60rpx;
+  line-height: 60rpx;
+}
