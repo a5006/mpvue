@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <SwiperTop :tops="tops"></SwiperTop>
     <BookList v-for="book in books" :key="book.id" :book="book"></BookList>
     <p class="text-bottom" v-if="!more">没有更多数据</p>
   </div>
@@ -7,15 +8,24 @@
 <script>
 import { get } from '@/util'
 import BookList from '@/components/BookList'
+import SwiperTop from '@/components/SwiperTop'
 export default {
   components: {
-    BookList
+    BookList,
+    SwiperTop
+  },
+  onShareAppMessage(res) {
+    console.log(res.target)
+    return {
+      title: '一个无聊的小程序'
+    }
   },
   data() {
     return {
       books: [],
       page: 0,
-      more: true
+      more: true,
+      tops: []
     }
   },
   methods: {
@@ -33,7 +43,6 @@ export default {
         if (moreBooks.length < 10 && this.page > 0) {
           this.more = false
         }
-        console.log(this.books, this.page)
         if (init) {
           wx.stopPullDownRefresh()
           this.books = book.data.list
@@ -43,9 +52,17 @@ export default {
         }
       }
       wx.hideNavigationBarLoading()
+    },
+    async getTop() {
+      const tops = await get('/weapp/top')
+      this.tops = tops.data.list
     }
   },
   mounted() {
+    this.getList(true)
+    this.getTop()
+  },
+  onHide() {
     this.getList(true)
   },
   onPullDownRefresh() {

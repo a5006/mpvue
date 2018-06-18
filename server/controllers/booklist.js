@@ -9,6 +9,7 @@ module.exports = async (ctx) => {
   // 这个query就是附带的条件
   const size = 10
   const books = await mysql('books')
+    // 查了books 这个表同时又查了csessioninfo这个表就是连表查询
     .select('books.*', 'csessioninfo.user_info')
     .join('csessioninfo', 'books.openid', 'csessioninfo.open_id')
     .offset(Number(page) * size)

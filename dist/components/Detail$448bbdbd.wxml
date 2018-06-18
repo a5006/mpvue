@@ -1,0 +1,21 @@
+<import src="BookInfo$3de3f656" />
+<import src="Comments$0b6e92da" />
+<template name="Detail$448bbdbd">
+  <view class="_div data-v-2d73c20f container">
+    <template data="{{...$root[$kk+'0'], $root}}" is="BookInfo$3de3f656"></template>
+    <template wx:if="{{commentList.length}}" data="{{...$root[$kk+'1'], $root}}" is="Comments$0b6e92da"></template>
+    <textarea value="{{comment}}" bindinput="handleProxy" wx:if="{{showAdd}}" class="_textarea data-v-2d73c20f textarea" maxlength="{{100}}" placeholder="请输入对书的评价" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+    <view wx:else class="_div data-v-2d73c20f showAdd"> 未登录或者已评论 </view>
+    <view class="_div data-v-2d73c20f switch">
+      <view class="_div data-v-2d73c20f location"> 地理位置：
+        <switch class="_switch data-v-2d73c20f checkbox" bindchange="handleProxy" checked="{{location}}" color="#47b0b7" data-eventid="{{'1'}}" data-comkey="{{$k}}" />
+        <label class="_span data-v-2d73c20f">{{location}} </label>
+      </view>
+      <view class="_div data-v-2d73c20f phone"> 手机型号：
+        <switch class="_switch data-v-2d73c20f checkbox" bindchange="handleProxy" checked="{{phone}}" color="#47b0b7" data-eventid="{{'2'}}" data-comkey="{{$k}}" />
+        <label class="_span data-v-2d73c20f">{{phone}}</label>
+      </view>
+    </view>
+    <button class="_button data-v-2d73c20f btn" bindtap="handleProxy" wx:if="{{showAdd}}" data-eventid="{{'3'}}" data-comkey="{{$k}}"> 评论</button>
+  </view>
+</template>

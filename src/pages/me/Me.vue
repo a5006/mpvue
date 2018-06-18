@@ -62,8 +62,6 @@ export default {
         isbn,
         openId: this.userinfo.openId
       })
-      console.log(res)
-      console.log(res, 'this is res')
       if (res.code === 0 && res.data.title) {
         showSuccess(`${res.data.title}添加成功`)
       }

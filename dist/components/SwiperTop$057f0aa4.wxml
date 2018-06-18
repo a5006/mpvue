@@ -1,0 +1,13 @@
+<template name="SwiperTop$057f0aa4">
+  <view class="_div data-v-02ec5f6e swiper">
+    <swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="#47b0b7" autoplay="true" interval="5000" duration="500" circular="ture" class="_swiper data-v-02ec5f6e">
+      <view wx:key="myindex" key="{{myindex}}" wx:for="{{imgUrls}}" wx:for-index="myindex" wx:for-item="item" class="_div data-v-02ec5f6e">
+        <swiper-item class="_swiper-item data-v-02ec5f6e swiper-item">
+          <view class="_div data-v-02ec5f6e slide-image" wx:key="img.id" key="{{img.id}}" wx:for="{{item}}" wx:for-index="index" wx:for-item="img">
+            <image mode="aspectFit" src="{{img.image}}" bindtap="handleProxy" data-eventid="{{'0-'+myindex+'-'+index}}" data-comkey="{{$k}}" class="_img data-v-02ec5f6e"></image>
+          </view>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+</template>

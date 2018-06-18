@@ -1,4 +1,18 @@
 
-.card {
-  padding: 20rpx;
+.rate.data-v-4b677ef8 {
+  position: relative;
+  font-size: 16rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+.rate .hide.data-v-4b677ef8 {
+  visibility: hidden;
+}
+.rate .show.data-v-4b677ef8 {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
 }

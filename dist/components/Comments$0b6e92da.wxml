@@ -1,0 +1,14 @@
+<template name="Comments$0b6e92da">
+  <view class="_div data-v-9ffe7cd0 comments_container">
+    <view class="_div data-v-9ffe7cd0 title"> 评论列表 </view>
+    <view class="_div data-v-9ffe7cd0 comments_list" wx:key="item.id" key="{{item.id}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+      <view class="_div data-v-9ffe7cd0 comments_title">
+        <image class="_img data-v-9ffe7cd0 img" src="{{item.image}}" alt></image>
+        <label class="_span data-v-9ffe7cd0 name">{{item.title}}</label>
+        <label class="_span data-v-9ffe7cd0 right ">{{item.time}}</label>
+      </view>
+      <view class="_div data-v-9ffe7cd0 comments_box"> {{item.comment}} </view>
+      <label class="_span data-v-9ffe7cd0 right">{{item.phone}} {{item.location}}</label>
+    </view>
+  </view>
+</template>

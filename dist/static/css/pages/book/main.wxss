@@ -1,3 +1,4 @@
+@import "/static/css/vendor.wxss";
 
 .book-card.data-v-3935d54b {
   padding: 10rpx;
@@ -19,6 +20,7 @@
 }
 .book-card .detail.data-v-3935d54b {
   margin-left: 20rpx;
+  height: 200rpx;
 }
 .book-card .detail .row.data-v-3935d54b {
   line-height: 40rpx;
@@ -50,20 +52,16 @@
 .book-card .detail .left.data-v-3935d54b {
   margin-left: 160rpx;
 }
-.rate.data-v-4b677ef8 {
-  position: relative;
-  font-size: 16rpx;
-  display: inline-block;
-  vertical-align: top;
+.swiper.data-v-02ec5f6e {
+  margin-top: 10rpx;
 }
-.rate .hide.data-v-4b677ef8 {
-  visibility: hidden;
+.swiper .swiper-item.data-v-02ec5f6e {
+  display: flex;
 }
-.rate .show.data-v-4b677ef8 {
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  width: 0;
-  overflow: hidden;
+.swiper .swiper-item .slide-image.data-v-02ec5f6e {
+  flex: 1;
+}
+.swiper .swiper-item ._img.data-v-02ec5f6e {
+  width: 100%;
+  height: 280rpx;
 }

@@ -22,6 +22,7 @@ export function get(url, data) {
 export function post(url, data) {
   return request(url, 'POST', data)
 }
+
 export function request(myurl, method, data) {
   return new Promise((resolve, reject) => {
     wx.request({
@@ -30,7 +31,6 @@ export function request(myurl, method, data) {
       method,
       success(res) {
         if (res.data.code === 0) {
-          console.log(res)
           resolve(res.data)
         } else {
           showModal('失败', res.data.data.msg)

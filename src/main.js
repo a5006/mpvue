@@ -37,7 +37,6 @@ export default {
         'selectedIconPath': 'static/img/me-active.png'
       }
       ]
-
     }
   }
 }

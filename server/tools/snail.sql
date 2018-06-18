@@ -16,3 +16,14 @@ DROP TABLE IF EXISTS `books`;
   `count` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `comments`;
+create table  `comments`(
+  id int not null auto_increment primary key,
+  openid varchar(100) not null,
+  bookid varchar(10) not null,
+  comment varchar(200) not null,
+  phone varchar(50),
+  location varchar(50)
+)ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+

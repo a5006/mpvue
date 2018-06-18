@@ -1,3 +1,4 @@
+@import "/static/css/vendor.wxss";
 
 .container.data-v-e4a7c0a2 {
   padding: 0 60rpx;

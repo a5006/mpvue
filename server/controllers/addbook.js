@@ -38,7 +38,6 @@ module.exports = async ctx => {
       price
     } = bookinfo
     const tags = bookinfo.tags.map(v => {
-      console.log(v, '_____________________________________')
       return `${v.title} ${v.count}`
     }).join(',')
     const author = bookinfo.author.join(',')

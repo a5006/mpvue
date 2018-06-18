@@ -2,23 +2,25 @@
 <template name="BookList$f9046b74">
   <view class="_div data-v-3935d54b book-card">
     <view class="_div data-v-3935d54b thumb">
-      <image src="{{book.image}}" class="_img data-v-3935d54b img" alt mode="aspectFit"></image>
+      <image bindtap="handleProxy" src="{{book.image}}" class="_img data-v-3935d54b img" alt mode="aspectFit" data-eventid="{{'0'}}" data-comkey="{{$k}}"></image>
     </view>
-    <view class="_div data-v-3935d54b detail">
-      <view class="_div data-v-3935d54b row">
-        <view class="_div data-v-3935d54b right rate"> {{book.rate}}
-          <template data="{{...$root[$kk+'0'], $root}}" is="Rate$64982a02"></template>
+    <navigator url="{{detail}}" class="_a data-v-3935d54b">
+      <view class="_div data-v-3935d54b detail">
+        <view class="_div data-v-3935d54b row">
+          <view class="_div data-v-3935d54b right rate"> {{book.rate}}
+            <template data="{{...$root[$kk+'0'], $root}}" is="Rate$64982a02"></template>
+          </view>
+          <view class="_div data-v-3935d54b left title"> {{book.title}} </view>
         </view>
-        <view class="_div data-v-3935d54b left title"> {{book.title}} </view>
+        <view class="_div data-v-3935d54b row">
+          <view class="_div data-v-3935d54b right"> 浏览量:{{book.count}} </view>
+          <view class="_div data-v-3935d54b left elliplis_twoline author"> {{book.author?book.author:' '}} </view>
+        </view>
+        <view class="_div data-v-3935d54b row">
+          <view class="_div data-v-3935d54b right"> {{book.user_info.nickName}} </view>
+          <view class="_div data-v-3935d54b left elliplis publisher"> {{book.publisher}} </view>
+        </view>
       </view>
-      <view class="_div data-v-3935d54b row">
-        <view class="_div data-v-3935d54b right"> 浏览量 </view>
-        <view class="_div data-v-3935d54b left elliplis_twoline author"> {{book.author?book.author:' '}} </view>
-      </view>
-      <view class="_div data-v-3935d54b row">
-        <view class="_div data-v-3935d54b right"> {{book.user_info.nickName}} </view>
-        <view class="_div data-v-3935d54b left elliplis publisher"> {{book.publisher}} </view>
-      </view>
-    </view>
+    </navigator>
   </view>
 </template>

@@ -2,13 +2,18 @@
  * ajax 服务路由集合
  */
 const router = require('koa-router')({
-    prefix: '/weapp'
+  prefix: '/weapp'
 })
 const controllers = require('../controllers')
 
 // 从 sdk 中取出中间件
 // 这里展示如何使用 Koa 中间件完成登录态的颁发与验证
-const { auth: { authorizationMiddleware, validationMiddleware } } = require('../qcloud')
+const {
+  auth: {
+    authorizationMiddleware,
+    validationMiddleware
+  }
+} = require('../qcloud')
 
 // --- 登录与授权 Demo --- //
 // 登录接口
@@ -37,4 +42,13 @@ router.get('/demo', controllers.demo)
 router.post('/addbook', controllers.addbook)
 
 router.get('/booklist', controllers.booklist)
+
+router.get('/bookdetail', controllers.bookdetail)
+
+router.get('/top', controllers.top)
+
+router.post('/comment', controllers.comment)
+
+router.get('/commentList', controllers.commentList)
+
 module.exports = router

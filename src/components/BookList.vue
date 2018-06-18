@@ -1,8 +1,9 @@
 <template>
   <div class="book-card">
     <div class="thumb">
-      <img :src="book.image" class="img" alt="" mode="aspectFit">
+      <img @click="preview" :src="book.image" class="img" alt="" mode="aspectFit">
     </div>
+    <a :href="detail">
     <div class="detail">
       <div class="row">
         <div class="right rate">
@@ -15,7 +16,7 @@
       </div>
          <div class="row">
         <div class="right">
-            浏览量
+            浏览量:{{book.count}}
         </div>
         <div class="left elliplis_twoline author">
         {{book.author?book.author:'&nbsp'}}
@@ -30,7 +31,9 @@
         </div>
       </div>
     </div>
+      </a>
   </div>
+
 </template>
 <script>
 import Rate from '@/components/Rate'
@@ -40,6 +43,21 @@ export default {
   props: ['book'],
   created() {
     console.log(this.books)
+  },
+  methods: {
+    preview() {
+      wx.previewImage({
+        current: this.book.image,
+        // 点击预览显示多张图片，则需要下面这个
+        urls: [this.book.image]
+      })
+    }
+  },
+  computed: {
+    detail() {
+      // 详情页跳转，main是入口文件
+      return '/pages/detail/main?id=' + this.book.id
+    }
   }
 }
 </script>
@@ -68,6 +86,7 @@ export default {
 
   .detail {
     margin-left: 10px;
+    height:100px;
 
     .row {
       line-height: 20px;

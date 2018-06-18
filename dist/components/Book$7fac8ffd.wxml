@@ -1,7 +1,9 @@
+<import src="SwiperTop$057f0aa4" />
 <import src="BookList$f9046b74" />
 <template name="Book$7fac8ffd">
   <view class="_div data-v-4f6f16e2 content">
-    <template wx:key="book.id" data="{{...$root[$kk+'0-'+index], $root}}" is="BookList$f9046b74" wx:for="{{books}}" wx:for-index="index" wx:for-item="book"></template>
+    <template data="{{...$root[$kk+'0'], $root}}" is="SwiperTop$057f0aa4"></template>
+    <template wx:key="book.id" data="{{...$root[$kk+'1-'+index], $root}}" is="BookList$f9046b74" wx:for="{{books}}" wx:for-index="index" wx:for-item="book"></template>
     <view class="_p data-v-4f6f16e2 text-bottom" wx:if="{{!more}}">没有更多数据</view>
   </view>
 </template>

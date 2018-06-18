@@ -1,0 +1,31 @@
+<import src="Rate$64982a02" />
+<template name="BookInfo$3de3f656">
+  <view class="_div data-v-18c7fd4a bookinfo">
+    <view class="_div data-v-18c7fd4a thumb">
+      <image class="_img data-v-18c7fd4a back" mode="aspectFill" src="{{info.image}}" alt></image>
+      <image class="_img data-v-18c7fd4a img" mode="aspectFit" src="{{info.image}}" alt></image>
+      <view class="_div data-v-18c7fd4a title_info">
+        <view class="_p data-v-18c7fd4a title">《 {{info.title}} 》</view>
+        <view class="_p data-v-18c7fd4a author">{{info.author}}</view>
+      </view>
+    </view>
+    <view class="_div data-v-18c7fd4a subTitle_info">
+      <view class="_div data-v-18c7fd4a owner">
+        <image class="_img data-v-18c7fd4a img" src="{{userInfo.image}}" alt></image> {{userInfo.nickName}}
+        <view class="_div data-v-18c7fd4a right">
+          <label class="_span data-v-18c7fd4a rate">{{info.rate}}</label>
+          <template data="{{...$root[$kk+'0'], $root}}" is="Rate$64982a02"></template>
+        </view>
+      </view>
+      <view class="_div data-v-18c7fd4a detail"> {{info.publisher}}
+        <view class="_div data-v-18c7fd4a right price"> ￥{{info.price}} </view>
+      </view>
+    </view>
+    <view class="_div data-v-18c7fd4a tags">
+      <view class="_div data-v-18c7fd4a tags_badge" wx:key="tag" key="{{tag}}" wx:for="{{info.tags}}" wx:for-index="index" wx:for-item="tag"> {{tag}} </view>
+    </view>
+    <view class="_div data-v-18c7fd4a summary">
+      <view class="_div data-v-18c7fd4a summary_badge" wx:key="index" key="{{index}}" wx:for="{{info.summary}}" wx:for-index="index" wx:for-item="item"> {{item}} </view>
+    </view>
+  </view>
+</template>
