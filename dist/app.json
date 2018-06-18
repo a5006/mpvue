@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/book/main",
-    "pages/comments/main",
     "pages/detail/main",
-    "pages/me/main"
+    "pages/me/main",
+    "pages/mybooks/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,8 +21,8 @@
         "selectedIconPath": "static/img/book-active.png"
       },
       {
-        "pagePath": "pages/comments/main",
-        "text": "评论",
+        "pagePath": "pages/mybooks/main",
+        "text": "我的图书",
         "iconPath": "static/img/todo.png",
         "selectedIconPath": "static/img/todo-active.png"
       },

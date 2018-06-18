@@ -25,8 +25,8 @@ export default {
         'selectedIconPath': 'static/img/book-active.png'
       },
       {
-        'pagePath': 'pages/comments/main',
-        'text': '评论',
+        'pagePath': 'pages/mybooks/main',
+        'text': '我的图书',
         'iconPath': 'static/img/todo.png',
         'selectedIconPath': 'static/img/todo-active.png'
       },

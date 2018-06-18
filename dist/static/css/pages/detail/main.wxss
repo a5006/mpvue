@@ -104,39 +104,3 @@
   font-size: 24rpx;
   color: #515151;
 }
-.comments_container.data-v-9ffe7cd0 {
-  margin: 20rpx auto;
-  padding: 0 3%;
-  font-size: 24rpx;
-  margin: 10rpx 0;
-}
-.comments_container .title.data-v-9ffe7cd0 {
-  margin: 20rpx 0;
-}
-.comments_container .comments_list.data-v-9ffe7cd0 {
-  margin: 10rpx 0;
-  padding: 10rpx;
-  overflow: hidden;
-  border: 2rpx solid #ddd;
-}
-.comments_container .comments_list .comments_title.data-v-9ffe7cd0 {
-  height: 40rpx;
-  line-height: 40rpx;
-}
-.comments_container .comments_list .comments_title .img.data-v-9ffe7cd0 {
-  width: 40rpx;
-  height: 40rpx;
-  border-radius: 50%;
-  margin-right: 12rpx;
-  display: inline-block;
-  vertical-align: middle;
-}
-.comments_container .comments_list .comments_box.data-v-9ffe7cd0 {
-  margin: 10rpx 0;
-  background: #fff;
-}
-.comments_container .comments_list .right.data-v-9ffe7cd0 {
-  float: right;
-  color: #515151;
-  font-size: 18rpx;
-}

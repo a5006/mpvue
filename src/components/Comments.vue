@@ -3,8 +3,7 @@
 <div class="title">
   评论列表
 </div>
-
-<div class="comments_list" v-for="item in list" :key="item.id">
+<div class="comments_list" v-for="item in list" :key="item.id" @click="handleClick(item)">
   <div class="comments_title">
   <img class="img" :src="item.image" alt="">
   <span class="name">{{item.title}}</span>
@@ -19,8 +18,17 @@
 </template>
 <script>
 export default {
-  props: ['list'],
-  computed: {}
+  props: ['list', 'type'],
+  computed: {},
+  methods: {
+    handleClick(item) {
+      if (this.type === 'comments') {
+        wx.navigateTo({
+          url: '/pages/detail/main?id=' + item.bookid
+        })
+      }
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -38,7 +46,7 @@ export default {
   .comments_list {
     margin: 5px 0;
     padding: 5px;
-    overflow :hidden;
+    overflow: hidden;
     border: 1px solid #dddddd;
 
     .comments_title {
@@ -49,9 +57,9 @@ export default {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        margin-right :6px;
-        display:inline-block;
-        vertical-align :middle;
+        margin-right: 6px;
+        display: inline-block;
+        vertical-align: middle;
       }
     }
 
@@ -65,7 +73,6 @@ export default {
       color: #515151;
       font-size: 9px;
     }
-
   }
 
   margin: 5px 0;

@@ -4,20 +4,27 @@ const {
 
 module.exports = async (ctx) => {
   const {
-    page
+    page,
+    openid
   } = ctx.request.query
   // 这个query就是附带的条件
   const size = 10
-  const books = await mysql('books')
-    // 查了books 这个表同时又查了csessioninfo这个表就是连表查询
-    .select('books.*', 'csessioninfo.user_info')
+  const mysqlSelect =  mysql('books')
+      .select('books.*', 'csessioninfo.user_info')
     .join('csessioninfo', 'books.openid', 'csessioninfo.open_id')
-    .offset(Number(page) * size)
-    .limit(size)
     .orderBy('books.id', 'desc')
+    // 查了books 这个表同时又查了csessioninfo这个表就是连表查询
+
   // limit 限制条数
   // offset 起点
   // oderby 排序
+  let books
+  if (openid) {
+    books = await mysqlSelect.where('books.openid', openid)
+  } else {
+    // 全部图书分页
+    books = await mysqlSelect.limit(size).offset(Number(page) * size)
+  }
   ctx.state.data = {
     // books 是获取到的书的数据列表，根据上面的操作，多获取了一个user_info
     // user_info是JSON格式，所以要转换,赋值给info

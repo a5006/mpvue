@@ -1,0 +1,1 @@
+<import src="../../components/Mybooks$6a86a3be" /><template is="Mybooks$6a86a3be" data="{{ ...$root['0'], $root }}"/>

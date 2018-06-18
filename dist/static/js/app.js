@@ -34,8 +34,8 @@ app.$mount();
         'iconPath': 'static/img/book.png',
         'selectedIconPath': 'static/img/book-active.png'
       }, {
-        'pagePath': 'pages/comments/main',
-        'text': '评论',
+        'pagePath': 'pages/mybooks/main',
+        'text': '我的图书',
         'iconPath': 'static/img/todo.png',
         'selectedIconPath': 'static/img/todo-active.png'
       }, {
@@ -60,7 +60,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(50)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
 
 /* template */

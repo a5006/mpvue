@@ -4,12 +4,20 @@ const {
 
 module.exports = async ctx => {
   const {
-    bookid
+    bookid,
+    openid
   } = ctx.request.query
-  const comments = await mysql('comments')
+  const mysqlSelect = mysql('comments')
     .select('comments.*', 'csessioninfo.user_info')
     .join('csessioninfo', 'comments.openid', 'csessioninfo.open_id')
-    .where('bookid', bookid)
+  let comments
+  if (bookid) {
+    // 图书详情页评论列表
+    comments = await mysqlSelect.where('bookid', bookid)
+  } else if (openid) {
+    // 根据个人的openid返回用户提交的图书
+    comments = await mysqlSelect.where('openid', openid)
+  }
   ctx.state.data = {
     list: comments.map(v => {
       const info = JSON.parse(v.user_info)

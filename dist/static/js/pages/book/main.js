@@ -1,4 +1,4 @@
-global.webpackJsonp([1],{
+global.webpackJsonp([2],{
 
 /***/ 100:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -11,7 +11,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(101)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
 
 /* template */
@@ -246,7 +246,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(91)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
 
 /* template */
@@ -435,202 +435,6 @@ if (false) {(function () {
     return false;
   }
 });
-
-/***/ }),
-
-/***/ 93:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_BookList_vue__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_3935d54b_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_BookList_vue__ = __webpack_require__(99);
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(94)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-
-/* template */
-
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-3935d54b"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_BookList_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_3935d54b_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_BookList_vue__["a" /* default */],
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "src\\components\\BookList.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] BookList.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3935d54b", Component.options)
-  } else {
-    hotAPI.reload("data-v-3935d54b", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
-
-
-/***/ }),
-
-/***/ 94:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 95:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Rate__ = __webpack_require__(44);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-// components 不是component
-/* harmony default export */ __webpack_exports__["a"] = ({
-  components: { Rate: __WEBPACK_IMPORTED_MODULE_0__components_Rate__["a" /* default */] },
-  props: ['book'],
-  created: function created() {
-    console.log(this.books);
-  },
-
-  methods: {
-    preview: function preview() {
-      wx.previewImage({
-        current: this.book.image,
-        // 点击预览显示多张图片，则需要下面这个
-        urls: [this.book.image]
-      });
-    }
-  },
-  computed: {
-    detail: function detail() {
-      // 详情页跳转，main是入口文件
-      return '/pages/detail/main?id=' + this.book.id;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "book-card"
-  }, [_c('div', {
-    staticClass: "thumb"
-  }, [_c('img', {
-    staticClass: "img",
-    attrs: {
-      "src": _vm.book.image,
-      "alt": "",
-      "mode": "aspectFit",
-      "eventid": '0'
-    },
-    on: {
-      "click": _vm.preview
-    }
-  })]), _vm._v(" "), _c('a', {
-    attrs: {
-      "href": _vm.detail
-    }
-  }, [_c('div', {
-    staticClass: "detail"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "right rate"
-  }, [_vm._v("\n        " + _vm._s(_vm.book.rate) + "\n        "), _c('Rate', {
-    attrs: {
-      "value": _vm.book.rate,
-      "mpcomid": '0'
-    }
-  })], 1), _vm._v(" "), _c('div', {
-    staticClass: "left title"
-  }, [_vm._v("\n        " + _vm._s(_vm.book.title) + "\n      ")])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "right"
-  }, [_vm._v("\n          浏览量:" + _vm._s(_vm.book.count) + "\n      ")]), _vm._v(" "), _c('div', {
-    staticClass: "left elliplis_twoline author"
-  }, [_vm._v("\n      " + _vm._s(_vm.book.author ? _vm.book.author : ' ') + "\n      ")])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "right"
-  }, [_vm._v("\n       " + _vm._s(_vm.book.user_info.nickName) + "\n      ")]), _vm._v(" "), _c('div', {
-    staticClass: "left elliplis publisher"
-  }, [_vm._v("\n         " + _vm._s(_vm.book.publisher) + "\n      ")])])])])])
-}
-var staticRenderFns = []
-render._withStripped = true
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-3935d54b", esExports)
-  }
-}
 
 /***/ })
 
