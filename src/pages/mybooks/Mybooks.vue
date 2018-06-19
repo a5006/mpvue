@@ -5,6 +5,7 @@
   <div class="title">我的图书</div>
   <BookList  v-for="book in books" :key="book.id" :book="book"></BookList>
     </div>
+    <div class="info" v-else>先登陆呗</div>
   </div>
 </template>
 <script>
@@ -65,7 +66,8 @@ export default {
 }
 </script>
 <style>
-.title {
+.title,
+.info {
   width: 94%;
   margin: 0 auto;
   color: #515151;

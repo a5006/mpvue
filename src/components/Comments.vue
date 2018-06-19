@@ -37,7 +37,7 @@ export default {
 .comments_container {
   margin: 10px auto;
   padding: 0 3%;
-  font-size: $fz12;
+  font-size: $fz14;
 
   .title {
     margin: 10px 0;
@@ -66,12 +66,13 @@ export default {
     .comments_box {
       margin: 5px 0;
       background: #fff;
+      font-size :16px;
     }
 
     .right {
       float: right;
       color: #515151;
-      font-size: 9px;
+      font-size: 12px;
     }
   }
 

@@ -7,6 +7,6 @@
     </view>
     <template data="{{...$root[$kk+'0'], $root}}" is="YearProgress$beec38ae"></template>
     <button class="_button data-v-e4a7c0a2 btn" wx:if="{{!userinfo.openId}}" lang="zh_CN" open-type="getUserInfo" bindgetuserinfo="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">登陆</button>
-    <button bindtap="handleProxy" class="_button data-v-e4a7c0a2 btn" data-eventid="{{'1'}}" data-comkey="{{$k}}">添加图书</button>
+    <button bindtap="handleProxy" class="_button data-v-e4a7c0a2 btn" hidden="{{!(userinfo.openId)}}" data-eventid="{{'1'}}" data-comkey="{{$k}}">添加图书</button>
   </view>
 </template>

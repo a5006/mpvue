@@ -5,7 +5,7 @@
     <span class="del" @click="del" v-show="text">X</span>
     </div>
     <div class="search"  @click="showData">
-      <img class="img" src="../../static/img/doge.png" alt="">
+      <img class="img" src="../../static/img/search.png" alt="">
     </div>
 
   </div>
@@ -38,42 +38,41 @@ export default {
 .search_box {
   display: flex;
   background: #47B0B7;
-  padding: 0 80px;
   position: relative;
+    padding: 0 20px;
   padding-bottom :4px;
 
+
   .text_box {
-    overflow :hidden;
-    flex: 9;
-    border-bottom: 1px solid #fafafa;
+    background:#fff;
+       border-radius :5px;
+       padding: 2px 10px;
+
 
     .text {
-      color: #fff;
-      font-size: $fz12;
-      flex: 9;
-      text-align: center;
-      width:90%;
-      float:left;
+      color: #47B0B7;
+      font-size: $fz14;
+margin-right:30px;
+      width:250px;
     }
 
     .del {
-      color: #fff;
-      font-size: 12px;
+      color: #47B0B7;
+      font-size: 14px;
       position: absolute;
-      right: 31%;
-      top: 0;
-      bottom: 0;
-      height:10px;
-      line-height :10px;
+      right: 18%;
+      top: 28%;
+      height:14px;
+      line-height :14px;
       margin: auto;
       opacity: 0.5;
     }
   }
 
   .search {
-    font-size: 10px;
-    color: #fff;
-    flex: 1;
+margin-left :10px;
+    font-size: 14px;
+    color: #47B0B7;
     border: 1px solid #47B0B7;
     border: none;
     height: 30px;
@@ -83,6 +82,8 @@ export default {
     .img {
       width: 30px;
       height: 30px;
+      padding:5px;
+      box-sizing :border-box;
       border-radius: 50%;
     }
   }

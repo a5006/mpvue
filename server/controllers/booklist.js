@@ -11,10 +11,10 @@ module.exports = async (ctx) => {
   // 这个query就是附带的条件
   const size = 10
   const mysqlSelect = mysql('books')
-    .select('books.*', 'csessioninfo.user_info')
-    .join('csessioninfo', 'books.openid', 'csessioninfo.open_id')
+    .select('books.*', 'cSessionInfo.user_info')
+    .join('cSessionInfo', 'books.openid', 'cSessionInfo.open_id')
     .orderBy('books.id', 'desc')
-  // 查了books 这个表同时又查了csessioninfo这个表就是连表查询
+  // 查了books 这个表同时又查了cSessionInfo这个表就是连表查询
 
   // limit 限制条数
   // offset 起点

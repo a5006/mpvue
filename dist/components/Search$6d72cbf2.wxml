@@ -5,7 +5,7 @@
       <label class="_span data-v-111fa24c del" bindtap="handleProxy" hidden="{{!(text)}}" data-eventid="{{'1'}}" data-comkey="{{$k}}">X</label>
     </view>
     <view class="_div data-v-111fa24c search" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
-      <image class="_img data-v-111fa24c img" src="/copy-asset/static/img/doge.png" alt></image>
+      <image class="_img data-v-111fa24c img" src="/copy-asset/static/img/search.png" alt></image>
     </view>
   </view>
 </template>

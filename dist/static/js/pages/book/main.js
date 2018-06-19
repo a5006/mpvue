@@ -334,7 +334,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_c('img', {
     staticClass: "img",
     attrs: {
-      "src": "../../static/img/doge.png",
+      "src": "../../static/img/search.png",
       "alt": ""
     }
   })])])

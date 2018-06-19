@@ -8,7 +8,7 @@
   placeholder="请输入对书的评价"
   ></textarea>
   <div v-else="showAdd" class="showAdd">
-    未登录或者已评论
+    评论模块暂未对用户开放
   </div>
 <div class="switch">
   <div class="location">
@@ -184,7 +184,7 @@ export default {
 @import '~styls/common.styl';
 
 .container {
-  font-size: $fz12;
+  font-size: $fz14;
 
   .textarea {
     margin: 0 auto;
@@ -216,7 +216,6 @@ export default {
     color: #515151;
     width: 94%;
     margin: 0 auto;
-    font-size: 10px;
   }
 }
 </style>

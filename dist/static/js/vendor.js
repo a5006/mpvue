@@ -6480,6 +6480,7 @@ module.exports = function (C, x) {
 
 "use strict";
 var host = 'http://localhost:5757';
+// const host = 'https://akwbmu4n.qcloud.la'
 var config = {
   host: host,
   loginUrl: host + '/weapp/login',

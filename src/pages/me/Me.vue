@@ -6,7 +6,7 @@
    </div>
   <YearProgress></YearProgress>
   <button class="btn" v-if="!userinfo.openId" lang="zh_CN" open-type="getUserInfo" @getuserinfo="login">登陆</button>
-  <button @click="scanBook" class='btn'>添加图书</button>
+  <button @click="scanBook" class='btn' v-show="userinfo.openId">添加图书</button>
  </div>
 </template>
 <script>

@@ -13,7 +13,7 @@ export default {
     'window': {
       'backgroundTextStyle': 'light',
       'navigationBarBackgroundColor': '#47B0B7',
-      'navigationBarTitleText': '起个名都挺随便的图书小程序',
+      'navigationBarTitleText': '岚阅',
       'navigationBarTextStyle': 'white'
     },
     'tabBar': {

@@ -1,6 +1,7 @@
 @import "/static/css/vendor.wxss";
 
-.title {
+.title,
+.info {
   width: 94%;
   margin: 0 auto;
   color: #515151;

@@ -381,6 +381,12 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "getuserinfo": _vm.login
     }
   }, [_vm._v("登陆")]) : _vm._e(), _vm._v(" "), _c('button', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.userinfo.openId),
+      expression: "userinfo.openId"
+    }],
     staticClass: "btn",
     attrs: {
       "eventid": '1'

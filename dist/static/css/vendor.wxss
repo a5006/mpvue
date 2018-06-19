@@ -71,7 +71,7 @@
 .comments_container.data-v-9ffe7cd0 {
   margin: 20rpx auto;
   padding: 0 3%;
-  font-size: 24rpx;
+  font-size: 28rpx;
   margin: 10rpx 0;
 }
 .comments_container .title.data-v-9ffe7cd0 {
@@ -98,9 +98,10 @@
 .comments_container .comments_list .comments_box.data-v-9ffe7cd0 {
   margin: 10rpx 0;
   background: #fff;
+  font-size: 32rpx;
 }
 .comments_container .comments_list .right.data-v-9ffe7cd0 {
   float: right;
   color: #515151;
-  font-size: 18rpx;
+  font-size: 24rpx;
 }

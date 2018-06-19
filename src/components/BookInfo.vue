@@ -56,7 +56,7 @@ export default {
 @import '~styls/common.styl';
 
 .bookinfo {
-  font-size: $fz14;
+  font-size: $fz16;
 
   .thumb {
     overflow: hidden;
@@ -85,7 +85,7 @@ export default {
       top: 170px;
       width: 100%;
       text-align: center;
-      font-size: 16px;
+
 
       .author {
         font-size: 14px;
@@ -109,9 +109,11 @@ export default {
 
     .price {
       color: $yellow;
-      font-size: $fz16;
-    }
 
+    }
+.detail{
+
+}
     .img {
       width: 20px;
       height: 20px;
@@ -123,7 +125,7 @@ export default {
 
   .tags {
     margin-left: 5px;
-
+font-size :$fz14;
     .tags_badge {
       display: inline-block;
       word-break: break-all;
@@ -138,7 +140,6 @@ export default {
   .summary {
     padding: 6px 10px;
     text-indent: 2em;
-    font-size: $fz12;
     color: #515151;
   }
 }
