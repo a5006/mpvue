@@ -1,0 +1,11 @@
+<template name="Search$6d72cbf2">
+  <view class="_div data-v-111fa24c search_box">
+    <view class="_div data-v-111fa24c text_box">
+      <input class="_input data-v-111fa24c text" placeholder-style="color:#fff;text-align:center;opacity:.5" type="text" value="{{text}}" bindinput="handleProxy" placeholder="请输入搜索的图书名" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+      <label class="_span data-v-111fa24c del" bindtap="handleProxy" hidden="{{!(text)}}" data-eventid="{{'1'}}" data-comkey="{{$k}}">X</label>
+    </view>
+    <view class="_div data-v-111fa24c search" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+      <image class="_img data-v-111fa24c img" src="/copy-asset/static/img/doge.png" alt></image>
+    </view>
+  </view>
+</template>

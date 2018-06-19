@@ -5,15 +5,16 @@ const {
 module.exports = async (ctx) => {
   const {
     page,
-    openid
+    openid,
+    bookName
   } = ctx.request.query
   // 这个query就是附带的条件
   const size = 10
-  const mysqlSelect =  mysql('books')
-      .select('books.*', 'csessioninfo.user_info')
+  const mysqlSelect = mysql('books')
+    .select('books.*', 'csessioninfo.user_info')
     .join('csessioninfo', 'books.openid', 'csessioninfo.open_id')
     .orderBy('books.id', 'desc')
-    // 查了books 这个表同时又查了csessioninfo这个表就是连表查询
+  // 查了books 这个表同时又查了csessioninfo这个表就是连表查询
 
   // limit 限制条数
   // offset 起点
@@ -21,6 +22,10 @@ module.exports = async (ctx) => {
   let books
   if (openid) {
     books = await mysqlSelect.where('books.openid', openid)
+  } else if (bookName) {
+    // 模糊匹配，假设我这里先让他返回图解HTTp这本书
+    books = await mysqlSelect.where('title', 'like', `%${bookName}%`)
+    console.log(books)
   } else {
     // 全部图书分页
     books = await mysqlSelect.limit(size).offset(Number(page) * size)

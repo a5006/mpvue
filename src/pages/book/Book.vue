@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <Search @ievent ="ievent"></Search>
     <SwiperTop :tops="tops"></SwiperTop>
     <BookList v-for="book in books" :key="book.id" :book="book"></BookList>
     <p class="text-bottom" v-if="!more">没有更多数据</p>
@@ -9,10 +10,12 @@
 import { get } from '@/util'
 import BookList from '@/components/BookList'
 import SwiperTop from '@/components/SwiperTop'
+import Search from '@/components/Search'
 export default {
   components: {
     BookList,
-    SwiperTop
+    SwiperTop,
+    Search
   },
   onShareAppMessage(res) {
     console.log(res.target)
@@ -25,10 +28,16 @@ export default {
       books: [],
       page: 0,
       more: true,
-      tops: []
+      tops: [],
+      bookName: ''
     }
   },
   methods: {
+    ievent(bookName) {
+      console.log('子组件传值', bookName)
+      this.bookName = bookName
+      this.getList(true)
+    },
     // 分页效果
     // init，是否为第一页
     async getList(init = false) {
@@ -37,7 +46,10 @@ export default {
         this.more = true
       }
       wx.showNavigationBarLoading()
-      const book = await get('/weapp/booklist', { page: this.page })
+      const book = await get('/weapp/booklist', {
+        page: this.page,
+        bookName: this.bookName
+      })
       if (book.code === 0) {
         const moreBooks = book.data.list
         if (moreBooks.length < 10 && this.page > 0) {

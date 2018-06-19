@@ -24,6 +24,7 @@ create table  `comments`(
   bookid varchar(10) not null,
   comment varchar(200) not null,
   phone varchar(50),
-  location varchar(50)
+  location varchar(50),
+  time varchar(20) not null
 )ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
