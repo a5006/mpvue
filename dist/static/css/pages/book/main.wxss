@@ -17,8 +17,7 @@
   display: flex;
   background: #47b0b7;
   position: relative;
-  padding: 0 40rpx;
-  padding-bottom: 8rpx;
+  padding: 8rpx 40rpx;
 }
 .search_box .text_box.data-v-111fa24c {
   background: #fff;

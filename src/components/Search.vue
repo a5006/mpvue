@@ -39,8 +39,8 @@ export default {
   display: flex;
   background: #47B0B7;
   position: relative;
-    padding: 0 20px;
-  padding-bottom :4px;
+    padding: 4px 20px;
+
 
 
   .text_box {
