@@ -1,5 +1,5 @@
 # mpvue
-  mpvue+koa2 //实现图书小程序
+  mpvue+koa2 实现图书小程序
 
   安装node模块
   npm install 
